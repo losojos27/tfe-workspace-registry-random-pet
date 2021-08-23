@@ -17,5 +17,5 @@ module "animal" {
   source  = "app.terraform.io/lo-petgrackle/pet/random"
   version = "1.2.0"
 
-  animal_name_length = var.animal_name_length
+  pet_name_length = var.animal_name_length
 }
