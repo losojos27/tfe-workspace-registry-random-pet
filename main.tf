@@ -6,18 +6,16 @@ terraform {
   }
 }
 
-resource "random_pet" "pet_name" {
-  length = 2
+module "pet" {
+  source  = "app.terraform.io/lo-petgrackle/pet/random"
+  version = "1.2.0"
+
+  pet_name_length = var.pet_name_length
 }
 
-output "pet_name" {
-  value = random_pet.pet_name.id
-}
+module "animal" {
+  source  = "app.terraform.io/lo-petgrackle/pet/random"
+  version = "1.2.0"
 
-resource "random_pet" "animal_name" {
-  length = 2
-}
-
-output "animal_name" {
-  value = random_pet.animal_name.id
+  animal_name_length = var.animal_name_length
 }
