@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    random = {
+      source = "hashicorp/random"
+    }
+  }
+}
+
 module "pet" {
   source  = "app.terraform.io/lo-petgrackle/pet/random"
   version = "1.2.1"
