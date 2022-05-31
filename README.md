@@ -1,1 +1,1 @@
-# demo-tfe-registry-random-pet
+# tfe-workspace-registry-random-pet
